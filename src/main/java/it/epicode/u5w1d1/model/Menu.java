@@ -28,4 +28,16 @@ public class Menu {
         }
         System.out.println();
     }
+
+    public List<Item> getPizzas() {
+        return pizzas;
+    }
+
+    public List<Topping> getToppings() {
+        return toppings;
+    }
+
+    public List<Drink> getDrinks() {
+        return drinks;
+    }
 }

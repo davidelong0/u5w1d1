@@ -1,0 +1,6 @@
+package it.epicode.u5w1d1.enumeration;
+
+public enum StatoTavolo {
+    LIBERO,
+    OCCUPATO
+}

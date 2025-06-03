@@ -9,13 +9,13 @@ import java.util.List;
 @Configuration
 public class MenuConfig {
 
-    // === PIZZA BASE ===
+
     @Bean
     public PizzaBase margherita() {
         return new PizzaBase("Pizza Margherita", 4.99, 1104);
     }
 
-    // === TOPPINGS ===
+
     @Bean
     public Topping cheese() {
         return new Topping("Cheese", 0.69, 92);
@@ -41,7 +41,7 @@ public class MenuConfig {
         return new Topping("Salami", 0.99, 86);
     }
 
-    // === DRINKS ===
+
     @Bean
     public Drink lemonade() {
         return new Drink("Lemonade (0.33l)", 1.29, 128);
@@ -57,10 +57,9 @@ public class MenuConfig {
         return new Drink("Wine (0.75l, 13%)", 7.49, 607);
     }
 
-    // === MENU ===
+
     @Bean
     public Menu menu() {
-        // Composed Pizzas
         PizzaComposed hawaiian = new PizzaComposed("Hawaiian Pizza",
                 margherita(), List.of(ham(), pineapple()));
 
@@ -68,11 +67,12 @@ public class MenuConfig {
                 margherita(), List.of(salami()));
 
         return new Menu(
-                List.of(margherita(), hawaiian, salamiPizza), // Pizzas
+                List.of(margherita(), hawaiian, salamiPizza), // Pizzas (List<Item>)
                 List.of(cheese(), ham(), onions(), pineapple(), salami()), // Toppings
                 List.of(lemonade(), water(), wine()) // Drinks
         );
     }
 }
+
 
 

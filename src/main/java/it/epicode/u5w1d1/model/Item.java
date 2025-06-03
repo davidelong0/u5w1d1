@@ -5,3 +5,4 @@ public interface Item {
     double getPrice();
     int getCalories();
 }
+
