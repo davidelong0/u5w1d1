@@ -14,7 +14,7 @@ public class Menu {
     }
 
     public void printMenu() {
-        System.out.println("--------- Menù ---------\n");
+        System.out.println("--------- Esempio Menù ---------\n");
 
         printSection("Pizzas", pizzas);
         printSection("Toppings", toppings);
